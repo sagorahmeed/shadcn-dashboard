@@ -18,8 +18,8 @@ const handler = NextAuth({
         const user = {
           id: "1",
           name: "Demo User",
-          email: "m@example.com",
-          password: "123456",
+          email: "demo@gmail.com",
+          password: "1234",
         }
 
         if (email === user.email && password === user.password) {
@@ -39,11 +39,11 @@ const handler = NextAuth({
     }),
   ],
   pages: {
-    signIn: "/login", // custom login page
+    signIn: "/login",
   },
   secret: process.env.NEXTAUTH_SECRET,
   session: {
-    strategy: "jwt", // use JWT-based sessions
+    strategy: "jwt",
   },
   callbacks: {
     async jwt({ token, user }) {
